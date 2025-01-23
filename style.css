@@ -8,6 +8,7 @@ body {
   
   h1 {
     color: #333;
+    background-color: grey;
   }
   
   #stock-prices {
@@ -18,8 +19,18 @@ body {
     border-radius: 5px;
     display: inline-block;
   }
+
+  #logo {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  #uber-logo {
+    width: 150px; /* Adjust the width as needed */
+    height: auto;
+  }
+  
   
   p {
     margin: 10px 0;
   }
-  
