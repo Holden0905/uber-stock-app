@@ -1,5 +1,5 @@
 const openingPriceElement = document.getElementById('opening-price');
-const closingPriceElement = document.getElementById('closing-price');
+const currentPriceElement = document.getElementById('closing-price');
 const priceArrowElement = document.getElementById('price-arrow');
 
 const fetchStockPrices = async () => {
@@ -13,17 +13,17 @@ const fetchStockPrices = async () => {
 
     // Get the opening and closing prices
     const openingPrice = data.o;
-    const closingPrice = data.c;
+    const currentPrice = data.c;
 
     // Display the prices
     openingPriceElement.textContent = `$${openingPrice.toFixed(2)}`;
-    closingPriceElement.textContent = `$${closingPrice.toFixed(2)}`;
+    currentPriceElement.textContent = `$${currentPrice.toFixed(2)}`;
 
     // Determine if the closing price is greater than the opening price
-    if (closingPrice > openingPrice) {
+    if (currentPrice > openingPrice) {
       priceArrowElement.textContent = '⬆'; // Green arrow
       priceArrowElement.style.color = 'green';
-    } else if (closingPrice < openingPrice) {
+    } else if (currentPrice < openingPrice) {
       priceArrowElement.textContent = '⬇'; // Red arrow
       priceArrowElement.style.color = 'red';
     } else {
@@ -33,7 +33,7 @@ const fetchStockPrices = async () => {
   } catch (error) {
     console.error('Error fetching stock data:', error);
     openingPriceElement.textContent = 'Error';
-    closingPriceElement.textContent = 'Error';
+    currentPriceElement.textContent = 'Error';
   }
 };
 
