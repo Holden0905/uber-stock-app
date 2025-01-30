@@ -3,25 +3,114 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Uber Stock Price</title>
+  <title>Stock Market Tracker</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>Uber Stock Price</h1>
-  
-  <!-- Uber Logo Section -->
-  <div id="logo">
-    <img src="uber-logo.png" alt="Uber Logo" id="uber-logo">
+  <div class="container">
+    <h1 class="main-title">Stock Market Tracker</h1>
+    
+    <div class="stock-grid">
+      <!-- Uber Stock Card -->
+      <div class="stock-card" data-symbol="UBER">
+        <div class="stock-header">
+          <div class="logo-container uber-bg">
+            <img src="uber-logo.png" alt="Uber Logo" class="stock-logo">
+          </div>
+          <div class="stock-info">
+            <h2>Uber Technologies</h2>
+            <span class="stock-symbol">(UBER)</span>
+          </div>
+        </div>
+        <div class="stock-details">
+          <div class="price-container">
+            <span class="current-price" id="uber-price">Loading...</span>
+            <span class="price-change"></span>
+          </div>
+        </div>
+        <div class="stock-chart" id="uber-chart">
+          <!-- Chart will be dynamically populated -->
+        </div>
+        <div class="chart-footer">Last 30 days</div>
+      </div>
 
+      <!-- Apple Stock Card -->
+      <div class="stock-card" data-symbol="AAPL">
+        <div class="stock-header">
+          <div class="logo-container apple-bg">
+            <img src="apple-logo.png" alt="Apple Logo" class="stock-logo">
+          </div>
+          <div class="stock-info">
+            <h2>Apple Inc.</h2>
+            <span class="stock-symbol">(AAPL)</span>
+          </div>
+        </div>
+        <div class="stock-details">
+          <div class="price-container">
+            <span class="current-price" id="apple-price">Loading...</span>
+            <span class="price-change"></span>
+          </div>
+        </div>
+        <div class="stock-chart" id="apple-chart">
+          <!-- Chart will be dynamically populated -->
+        </div>
+        <div class="chart-footer">Last 30 days</div>
+      </div>
 
+      <!-- Google Stock Card -->
+      <div class="stock-card" data-symbol="GOOGL">
+        <div class="stock-header">
+          <div class="logo-container google-bg">
+            <img src="google-logo.png" alt="Google Logo" class="stock-logo">
+          </div>
+          <div class="stock-info">
+            <h2>Alphabet Inc.</h2>
+            <span class="stock-symbol">(GOOGL)</span>
+          </div>
+        </div>
+        <div class="stock-details">
+          <div class="price-container">
+            <span class="current-price" id="google-price">Loading...</span>
+            <span class="price-change"></span>
+          </div>
+        </div>
+        <div class="stock-chart" id="google-chart">
+          <!-- Chart will be dynamically populated -->
+        </div>
+        <div class="chart-footer">Last 30 days</div>
+      </div>
+
+      <!-- Microsoft Stock Card -->
+      <div class="stock-card" data-symbol="MSFT">
+        <div class="stock-header">
+          <div class="logo-container microsoft-bg">
+            <img src="microsoft-logo.png" alt="Microsoft Logo" class="stock-logo">
+          </div>
+          <div class="stock-info">
+            <h2>Microsoft Corporation</h2>
+            <span class="stock-symbol">(MSFT)</span>
+          </div>
+        </div>
+        <div class="stock-details">
+          <div class="price-container">
+            <span class="current-price" id="microsoft-price">Loading...</span>
+            <span class="price-change"></span>
+          </div>
+        </div>
+        <div class="stock-chart" id="microsoft-chart">
+          <!-- Chart will be dynamically populated -->
+        </div>
+        <div class="chart-footer">Last 30 days</div>
+      </div>
+    </div>
+
+    <div class="refresh-notice">
+      Data refreshed every 5 minutes
+    </div>
   </div>
 
-  <!-- Stock Prices Section -->
-  <div id="stock-prices">
-    <p>Opening Price: <span id="opening-price">Loading...</span></p>
-    <p>Current Price: <span id="closing-price">Loading...</span> <span id="price-arrow"></span></p>
-  </div>
-
+  <!-- jQuery for selector support -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script src="script.js"></script>
 </body>
 </html>
